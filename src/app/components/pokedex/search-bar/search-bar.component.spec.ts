@@ -28,6 +28,9 @@ describe('SearchBarComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
@@ -40,8 +43,18 @@ describe('SearchBarComponent', () => {
         }
       }
     };
-
     component.onSubmit(testForm);
     expect(mockPokedexService.getPokemonInfos).toHaveBeenCalled();
+  });
+  it('n\'appel pas le get pokemon info si il n\'y a pas de valeur', () => {
+    const testForm = <NgForm>{
+      form: {
+        value: {
+          'pokemon-name': ''
+        }
+      }
+    };
+    component.onSubmit(testForm);
+    expect(mockPokedexService.getPokemonInfos).not.toHaveBeenCalled();
   });
 });
