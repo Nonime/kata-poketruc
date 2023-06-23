@@ -5,4 +5,8 @@ describe('CapitalizePipe', () => {
     const pipe = new CapitalizePipe();
     expect(pipe).toBeTruthy();
   });
+  xit('Pipe transforme le text en uppercase', () => {
+    const pipe = new CapitalizePipe();
+    expect(pipe.transform('value')).toEqual("VALUE");
+  });
 });

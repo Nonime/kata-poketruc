@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { PokedexService } from 'src/app/services/pokedex.service';
+import {Component, OnInit} from '@angular/core';
+import {NgForm} from '@angular/forms';
+import {PokedexService} from '../../../services/pokedex.service';
+
 
 @Component({
   selector: 'app-search-bar',
@@ -9,7 +10,8 @@ import { PokedexService } from 'src/app/services/pokedex.service';
 })
 export class SearchBarComponent implements OnInit {
 
-  constructor(private pokedexService: PokedexService) { }
+  constructor(private pokedexService: PokedexService) {
+  }
 
   ngOnInit(): void {
   }
