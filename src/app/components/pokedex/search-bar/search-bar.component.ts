@@ -19,9 +19,11 @@ export class SearchBarComponent implements OnInit {
   /**
    * Refresh le pokemon affiché par le display
    * @param form
-    // form.controls['pokemon-name']?.getRawValue()
    */
   onSubmit(form: NgForm) {
-    this.pokedexService.getPokemonInfos(form.form?.value['pokemon-name']);
+    let textSasieDansInput = form.form?.value['pokemon-name'];
+    if (textSasieDansInput !== '') {
+      this.pokedexService.getPokemonInfos(textSasieDansInput);
+    }
   }
 }
