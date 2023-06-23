@@ -4,10 +4,13 @@ import { PokedexService } from './pokedex.service';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {constantes} from '../../constants';
 import {first} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import createSpy = jasmine.createSpy;
 
 describe('PokedexService', () => {
 
   let httpMock: HttpTestingController;
+  let httpClientMock: HttpClient;
   /**
    * exemple
    * https://pokeapi.co/api/v2/pokemon/ditto
@@ -20,13 +23,14 @@ describe('PokedexService', () => {
       imports: [HttpClientTestingModule]
     });
     httpMock = TestBed.inject(HttpTestingController);
+    httpClientMock = TestBed.inject(HttpClient);
     service = TestBed.inject(PokedexService);
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-  xit('va récupèrer un pokemon dans l\'api', done => {
+  it('va récupèrer un pokemon dans l\'api', done => {
     let testRequest = httpMock.expectOne(constantes.URL_POKE_API + nomDigimon, 'GET');
     testRequest.flush(constantes.RESPONSE_API_MOCK);
     expect(service).toBeTruthy();

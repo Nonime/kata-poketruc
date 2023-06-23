@@ -11,12 +11,7 @@ import {BrowserDynamicTestingModule} from '@angular/platform-browser-dynamic/tes
 describe('ResultDisplayComponent', () => {
   let component: ResultDisplayComponent;
   let fixture: ComponentFixture<ResultDisplayComponent>;
-  let mockPokeService = {
-    currentPokemon$: of(constantes.RESPONSE_API_MOCK),
-    getPokemonInfos(pokemonName: string) {
-      console.log('call with' + pokemonName);
-    }
-  };
+
 
   beforeEach(() => {
     TestBed.configureTestingModule({
