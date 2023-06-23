@@ -23,5 +23,6 @@ export class SearchBarComponent implements OnInit {
     // form.controls['pokemon-name']?.getRawValue()
    */
   onSubmit(form: NgForm) {
+    this.pokedexService.getPokemonInfos(form.form?.value['pokemon-name']);
   }
 }
