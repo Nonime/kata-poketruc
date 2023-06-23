@@ -9,7 +9,7 @@ import { PokemonResponse } from '../interfaces/PokemonResponse';
 })
 export class PokedexService {
 
-  currentPokemon = new BehaviorSubject<PokemonResponse | undefined>(undefined)
+  currentPokemon$ = new BehaviorSubject<PokemonResponse | undefined>(undefined)
 
   constructor(private http: HttpClient) { }
 
