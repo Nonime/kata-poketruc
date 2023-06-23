@@ -2,11 +2,8 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ResultDisplayComponent} from './result-display.component';
 import {PokedexService} from '../../../services/pokedex.service';
-import {constantes} from '../../../../constants';
-import {of} from 'rxjs';
 import {FormsModule} from '@angular/forms';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {BrowserDynamicTestingModule} from '@angular/platform-browser-dynamic/testing';
 
 describe('ResultDisplayComponent', () => {
   let component: ResultDisplayComponent;

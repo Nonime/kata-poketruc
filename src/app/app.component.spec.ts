@@ -4,15 +4,8 @@ import {ResultDisplayComponent} from './components/pokedex/result-display/result
 import {SearchBarComponent} from './components/pokedex/search-bar/search-bar.component';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {PokedexService} from './services/pokedex.service';
-import {of} from 'rxjs';
-import {constantes} from '../constants';
 import {FormsModule} from '@angular/forms';
-let mockPokeService = {
-  currentPokemon$: of(constantes.RESPONSE_API_MOCK),
-  getPokemonInfos(pokemonName: string) {
-    console.log('call with'+ pokemonName);
-  }
-};
+
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     providers: [

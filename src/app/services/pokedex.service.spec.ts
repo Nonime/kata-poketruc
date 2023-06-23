@@ -1,11 +1,10 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { PokedexService } from './pokedex.service';
+import {PokedexService} from './pokedex.service';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {constantes} from '../../constants';
 import {first} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
-import createSpy = jasmine.createSpy;
 
 describe('PokedexService', () => {
 
@@ -32,8 +31,7 @@ describe('PokedexService', () => {
   });
   it('va récupèrer un pokemon dans l\'api', done => {
     service.getPokemonInfos(nomDigimon);
-    let testRequest = httpMock.expectOne(constantes.URL_POKE_API + nomDigimon);
-    testRequest.flush(constantes.RESPONSE_API_MOCK);
+    httpMock.expectOne(constantes.URL_POKE_API + nomDigimon).flush(constantes.RESPONSE_API_MOCK);
     service.currentPokemon$
       .pipe(first())
       .subscribe((data) => {

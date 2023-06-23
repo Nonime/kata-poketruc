@@ -13,7 +13,7 @@ describe('PokemonTypesPipe', () => {
   });
   it('Affiche le type pour un pokemon duotype', () => {
     const pipe = new PokemonTypesPipe();
-    let value = [{name: 'Normal',url: "notUsed"},
+    const value = [{name: 'Normal',url: "notUsed"},
                  {name: 'Feu',url: "notUsed"}]as Type[];
     expect(pipe.transform(value, ", ")).toEqual('Normal, Feu');
   });
