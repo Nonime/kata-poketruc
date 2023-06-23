@@ -16,6 +16,12 @@ export class SearchBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Refresh le pokemon affiché par le display
+   * TODO appel du pokedex service
+   * @param form
+    // form.controls['pokemon-name']?.getRawValue()
+   */
   onSubmit(form: NgForm) {
   }
 }
