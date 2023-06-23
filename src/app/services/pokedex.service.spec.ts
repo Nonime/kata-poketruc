@@ -31,9 +31,9 @@ describe('PokedexService', () => {
     expect(service).toBeTruthy();
   });
   it('va récupèrer un pokemon dans l\'api', done => {
-    let testRequest = httpMock.expectOne(constantes.URL_POKE_API + nomDigimon, 'GET');
+    service.getPokemonInfos(nomDigimon);
+    let testRequest = httpMock.expectOne(constantes.URL_POKE_API + nomDigimon);
     testRequest.flush(constantes.RESPONSE_API_MOCK);
-    expect(service).toBeTruthy();
     service.currentPokemon$
       .pipe(first())
       .subscribe((data) => {
