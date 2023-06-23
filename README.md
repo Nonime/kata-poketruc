@@ -1,27 +1,26 @@
-# PokedexApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+TP: 
+Réaliser les tests pour avoir un développement de style TDD d'une application que l'on veut cloner.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Pour cela, il faudra dans un premier temps réaliser la batterie de test correspondant aux éléments suivants:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Pour commencer
+* pokedex.service.ts
+* capitalize.pipe.ts
+* pokemon-types.pipe.ts
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+Pour aller plus loin dans les tests de logique métier
+* search-bar.component.ts
+* result-display.component.ts
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Pour tester également l'interface et son lien vis à vis de la logique métier
+* search-bar.component.html
+* result-display.component.html
