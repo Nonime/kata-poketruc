@@ -5,8 +5,12 @@ import { Type } from '../interfaces/PokemonResponse';
   name: 'pokemonTypes'
 })
 export class PokemonTypesPipe implements PipeTransform {
-  transform(value: Type[], arg: string): string {
-    return ''
+  transform(tableauDesTypes: Type[], arg: string): string {
+    let resultat: string = '';
+    tableauDesTypes.forEach(value => {
+      resultat = resultat + value.name;
+    });
+    return resultat;
   }
 
 }

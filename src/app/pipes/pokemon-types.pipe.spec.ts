@@ -9,7 +9,8 @@ describe('PokemonTypesPipe', () => {
   it('Affiche le type pour un pokemon monotype', () => {
     const pipe = new PokemonTypesPipe();
     let value = [{name: 'Normal',url: "http://google.com"}]as Type[];
-    expect(pipe.transform(value, ", ")).toEqual('Normal');
+    let actual: string = pipe.transform(value, ", ")as string;
+    expect(actual).toEqual('Normal');
   });
   it('Affiche le type pour un pokemon duotype', () => {
     const pipe = new PokemonTypesPipe();
