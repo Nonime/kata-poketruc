@@ -1,4 +1,4 @@
-import { PokemonTypesPipe } from './pokemon-types.pipe';
+import {PokemonTypesPipe} from './pokemon-types.pipe';
 import {Type} from '../interfaces/PokemonResponse';
 
 describe('PokemonTypesPipe', () => {
@@ -9,8 +9,7 @@ describe('PokemonTypesPipe', () => {
   it('Affiche le type pour un pokemon monotype', () => {
     const pipe = new PokemonTypesPipe();
     let value = [{name: 'Normal',url: "http://google.com"}]as Type[];
-    let actual: string = pipe.transform(value, ", ")as string;
-    expect(actual).toEqual('Normal');
+    expect(pipe.transform(value, ", ")).toEqual('Normal');
   });
   it('Affiche le type pour un pokemon duotype', () => {
     const pipe = new PokemonTypesPipe();
