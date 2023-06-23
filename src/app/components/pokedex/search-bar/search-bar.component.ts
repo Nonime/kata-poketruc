@@ -18,7 +18,6 @@ export class SearchBarComponent implements OnInit {
 
   /**
    * Refresh le pokemon affiché par le display
-   * TODO appel du pokedex service
    * @param form
     // form.controls['pokemon-name']?.getRawValue()
    */
